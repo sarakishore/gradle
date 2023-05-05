@@ -21,3 +21,4 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+task releaseTar(type: Tar, dependsOn: ['build']) { with packageDistribution }
